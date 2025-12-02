@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Random Interval Button Clicker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Random Clicker</h1>
+      <label>
+        Button selector
+        <input id="selector" type="text" placeholder="CSS selector (e.g. button.submit)" />
+      </label>
+      <label>
+        Minimum interval (ms)
+        <input id="minInterval" type="number" min="0" value="1000" />
+      </label>
+      <label>
+        Maximum interval (ms)
+        <input id="maxInterval" type="number" min="0" value="3000" />
+      </label>
+      <div class="actions">
+        <button id="start">Start</button>
+        <button id="stop" class="secondary">Stop</button>
+      </div>
+      <p id="status" role="status"></p>
+      <p class="hint">
+        The button is clicked at a random interval between the minimum and maximum values. Make sure the selector uniquely identifies the button you want to click.
+      </p>
+    </main>
+    <script src="popup.js" defer></script>
+  </body>
+</html>
